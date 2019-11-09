@@ -27,11 +27,17 @@ export default {
       required: true
     }
   },
+  data(){ 
+    return{
+      a: {},
+      b: {}
+    }
+  },
   mounted() {
     document.body.addEventListener('keyup', e => {
       if (e.keyCode === 27) this.$emit('close')
-    })
-  }
+    }) 
+  } 
 }
 </script>
 

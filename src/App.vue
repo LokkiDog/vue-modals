@@ -58,7 +58,8 @@ export default {
       modalSecond: {
         show: false,
         name: "",
-        email: ""
+        email: "",
+        data: ""
       },
       modalValidate: false
     }
@@ -72,7 +73,7 @@ export default {
       this.modalSecond.name = "",
       this.modalSecond.email = "",
       this.modalSecond.show = false
-    }
+    } 
   }
 } 
 </script>  
