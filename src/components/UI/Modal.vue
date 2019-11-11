@@ -12,9 +12,14 @@
         <!-- body -->
         <div class="modal-body">
           <slot name="body"></slot>
-        </div>
+        </div> 
 
+        <!-- footer -->
+        <div class="modal-footer" @click.stop="">
+          <slot name="footer"></slot>
+        </div>
       </div>
+      
     </div>
   </transition>
 </template>
@@ -27,17 +32,11 @@ export default {
       required: true
     }
   },
-  data(){ 
-    return{
-      a: {},
-      b: {}
-    }
-  },
   mounted() {
     document.body.addEventListener('keyup', e => {
       if (e.keyCode === 27) this.$emit('close')
     }) 
-  } 
+  }
 }
 </script>
 
